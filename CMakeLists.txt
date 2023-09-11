@@ -3,4 +3,7 @@ project(untitled1)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(untitled1 Queue/Queue.cpp)
+add_executable(untitled1 Queue/Queue.cpp
+        stack/Stack.cpp
+        stack/Stack.cpp
+)

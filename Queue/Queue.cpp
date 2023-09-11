@@ -29,6 +29,14 @@ class Queue {
     bool isfull(){
         // we need to check if the rear-end equal the size of stack
         return stackRear == StackMaxSize - 1;
+
+        // for circular queue
+        /*
+         * we need to calculate the rear by this formula = (rear+1) % queue size
+         * compare this with front-end
+         * Demo Code :
+                return ( (rear+1) % (queue size) == front );
+         * */
     }
 
     // implements adding to stack function is called as : Enqueue
@@ -50,6 +58,13 @@ class Queue {
          }
          else {
              stackRear++;
+
+             // for circular Queue
+             /*
+              * calculate (rear+1) % queue size
+              * Demo Code
+                    stackRear = (rear + 1 ) % queue size
+              * */
          }
          stackArray[stackRear] = value;
     }
@@ -74,7 +89,12 @@ class Queue {
         }
         else {
             stackArray[stackFront] = 0 ;
-            stackFront++;
+            // for circular Queue
+            /*
+             * calculate (front+1) % queue size
+             * Demo Code
+                   stackFront = (front + 1 ) % queue size
+             * */
         }
     }
 
